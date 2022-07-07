@@ -1,0 +1,84 @@
+.mfd-body {
+    background-color: #292f37;
+    color: #e8f7ff; 
+    font-family: mononoki Nerd Font Mono;
+    font-size: 14px
+}
+
+.mfd-button {
+    font-size: x-large;
+    border-width: 2px;
+    width: 100%;
+    font-weight: bold;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem
+}
+
+#mfd-page .mfd-button {
+    padding-top:0px;
+    padding-bottom:0px;
+    font-size:30px
+}
+
+.mfd-button-group {
+    width: 100%;
+}
+
+.mfd-label {
+    color: #ca79ca
+}
+
+.mfd-info {
+    color: #79baca
+}
+
+.mfd-alert {
+    color: #ffdb5a
+}
+
+
+.bg-mfd-readable {
+    background-color: #18181f;
+    color: #e8f7ff
+}
+
+
+#mfd-clock {}
+
+#mfd-date {}
+
+#mfd-tdl {}
+
+#mfd-buttons-left {}
+
+#mfd-buttons-right {}
+
+#mfd-header {}
+
+#mfd-term {}
+
+#mfd-anc {}
+
+#mfd-page {}
+
+#mfd-page-titlebar {
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card,.card-header {border-radius: 0px; border-width: 2px;}
+
+
+
+.table {
+    color: inherit
+}
+
+.border,
+.border-start,
+.border-end,
+.border-top,
+.border-bottom {
+    border-width: 2px !important
+}
