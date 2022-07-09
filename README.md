@@ -5,18 +5,19 @@ Jetstream is a web-based software suite for building custom software tools that 
 
 By taking inspiration from effecient and reliable industries like aviation, engeering, health and military, Jetstream provides tools for Modeling, Controlling and Instrumenting (MCI) this IDR and creating ergonomic interfaces. 
 ![Jetstream Screenshot](Jetstream-Sample.png)
+The sample above ([index.htm](index.htm)) is just one interpretation of a multifunction Task/Event/Communication management and notification system.
 
-## How it works
+## How it works (More to come...)
 Most software languages and tools tend to think of information in terms of Classes, Types or Tables. Jetstream uses Info `Kinds` to label and prototype, but not define modeled information.
 
 ## Jetstream Process
 The acronym `MITER` is useful for remembering process for handling IDR:
 ``` 
-- M -  Model         Determine key IDR
-- I -  Integrate     Inject real-world data (Manual entry, 3rd Party API, File)
-- T -  Tool          Build scripts, schedules, screens, alarms, etc.
-- E -  Employ       Use the tools -> Record feedback and telemetry -> Deliver
-- R -  Reflect+Redo  Review telemetry -> Improve ->
+- M -  Model           Determine key IDR Kinds and their prototypes
+- I -  Integrate       Inject real-world data (Manual entry, 3rd Party API, File)
+- T -  Tool            Build scripts, schedules, screens, alarms, etc.
+- E -  Employ          Use the tools -> Record feedback and telemetry -> Deliver
+- R -  Reflect+Redo    Review telemetry -> Improve ->
 ```
 
 ## Core IDR Kinds
