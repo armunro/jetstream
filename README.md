@@ -1,19 +1,14 @@
 # Jetstream IDR-MCIS
+---
+Jetstream is a web-based software suite for building custom software tools that centralize Information, Data and Resources (IDR). Emails, Calendar Events, Alarms, Vehicles, Help Articles are all examples of IDR that we conventionally manage within a variety of apps and services.
 
-Information, Data, Resources -> (Model, Command, Instrument) System
-
-## Abstract
-IT individuals and teams are perfectly equipped for building custom tooling. Such custom tools can offer increases in efficiency and engagement. When this tooling is a direct translation of a person or groups experienced problems and solutions, things like efficiency and ergonomics can be finely tuned.
-
-In reality, tooling requirements are often treated by engineers and their managers a secondary concern to the primary business needs. My experience is that IT self-tooling largely perceived as either A) extraneous work or B) a quality possessed by only the most passionate/experienced engineers. When compared to today's turnkey and bespoke info and process management solutions (E.g. Wikis, Issue Trackers, CRM/ERP) custom tooling does indeed have a greater barrier of entry. 
-
-IDR-MCIS is an acronym that captures the respective scope and process in which Jetstream attempts to develop and promote custom tooling for.
+Jetstream provides tools for Modeling, Controlling and Instrumenting (MCI) this IDR and refining it into reactive applications with simple and ergonomic interfaces.
 
 ## How it works
-Most software languages and tools tend to think of information in terms of Classes, Types or Tables. Jetstream uses Info Kinds.
+Most software languages and tools tend to think of information in terms of Classes, Types or Tables. Jetstream uses Info `Kinds` to label and prototype, but not define modeled information.
 
 ## Jetstream Process
-The acronym `MITER` is useful for remembering the design process
+The acronym `MITER` is useful for remembering process for handling IDR:
 ``` 
 - M -  Model         Determine key IDR
 - I -  Integrate     Inject real-world data (Manual entry, 3rd Party API, File)
@@ -22,7 +17,9 @@ The acronym `MITER` is useful for remembering the design process
 - R -  Reflect+Redo  Review telemetry -> Improve ->
 ```
 
-## Core Information Kinds
+## Core IDR Kinds
+Jetstream uses *Kinds* to capture patterns of Information, Data and Resources. Since some Kinds of IDR are ubiquitous across teams, cultures and locations (Calendars, Alarms, Grocery Lists, etc.) Jetstream includes the following core *Kinds* to: A) Provide a solid start to prototyping your own kinds and B) to enable simple configuration and integration with the Jetstream core:
+
 - `Note` - Simple `Name` and `Content` message to yourself.
 - `TaskList` - A collection of tasks
 - `Task` - Something that needs doing; Optionally it may have a deadline
@@ -32,3 +29,6 @@ The acronym `MITER` is useful for remembering the design process
 - `Message` - A human-readable message with attached data
 - `ServiceLink` -  A software component that establishes standardized communication between Jetstream and house-built and 3rd party services. ServiceLinks provide bidirectional communication by converting 3rd party data into Jetstream Resources and v. versa.
 - `Screen` - View for a resource or set of resources
+
+
+
