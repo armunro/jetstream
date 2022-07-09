@@ -1,4 +1,5 @@
-# Jetstream IDR-MCIS
+![](Jetstream-LogoV1.png)
+
 ---
 Jetstream is a web-based software suite for building custom software tools that centralize Information, Data and Resources (IDR). Emails, Calendar Events, Alarms, Vehicles, Help Articles are all examples of IDR that we conventionally manage within a variety of apps and services.
 
