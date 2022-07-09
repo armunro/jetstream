@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MFD</title>
+  <title>Jetstream SAMPLE UI</title>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="vendor/js/bootstrap.bundle.min.js"></script>
   <link href="vendor/css/bootstrap.min.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
               <div class="col-2 mfd-alert">TDMS-1</div>
               <div class="col-10">
                 <span class="mfd-label">AlertManager</span> | PROD |
-                <span class="mfd-info">MYSQL Connection Count Critical</span>
+                <span class="mfd-info">MYSQL Conn Count Critical</span>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
         <!-- Real Time Info - END -->
         <div class="row" style="min-height: 80%">
           <div class="col-md-1 p-0 pe-1">
-            <div class="nav  flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <div class="nav  flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
               <button class="btn active btn-outline-info mfd-button mb-1" id="v-pills-dash-tab" data-bs-toggle="pill"
                 data-bs-target="#v-pills-dash" type="button" role="tab" aria-controls="v-pills-dash"
                 aria-selected="true">
@@ -124,7 +124,7 @@
           <div class="col-md-10 p-0">
             <div id="mfd-page" class="h-100 bg-mfd-readable tab-content">
               <div class="tab-pane show active" id="v-pills-dash" role="tabpanel" aria-labelledby="v-pills-dash-tab">
-                <div class="container p-0 m-0">
+                <div class="container-fluid p-0 m-0">
                   <div class="card bg-dark">
                     <h5 class="card-header">DASH - Dashboard</h5>
                     <div class="card-body">
@@ -137,94 +137,106 @@
                 </div>
               </div>
               <div class="tab-pane fade fade" id="v-pills-task" role="tabpanel" aria-labelledby="v-pills-task-tab">
-                <div class="container p-0 m-0">
-                  <div class="">
-                    <div class="row g-0 h-25">
-                      <div class="col-12 bg-dark">
-                        <div class="btn-group mfd-button-group p-1">
-                          <button type="button" class="btn mfd-button btn-outline-primary m-1">
-                            ﭜ
-                          </button>
-                          <button type="button" class="btn mfd-button btn-outline-danger m-1">
-                            
-                          </button>
-                          <button type="button" class="btn mfd-button btn-outline-success m-1">
-                            ﬽
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row g-0 h-100">
-                      <div class="col-2 p-1 bf">
-                        <div class="card text-white bg-mfd-readable border-secondary mb-3" style="max-width: 18rem">
-                          <div class="card-header border-secondary p-2">
-                            Lists
-                          </div>
-                          <div class="card-body p-1">
-                            <table class="table table-borderless">
-                              <tbody>
-                                <tr>
-                                  <td>Tasks</td>
-                                </tr>
-                                <tr>
-                                  <td>Home.Tasks</td>
-                                </tr>
-                                <tr>
-                                  <td>Work.Yardi</td>
-                                </tr>
-                                <tr>
-                                  <td>Projects.Atom</td>
-                                </tr>
-                                <tr>
-                                  <td>Projects.Jetstream</td>
-                                </tr>
-                              </tbody>
-                            </table>
+                <div class="container-fluid p-0 m-0">
+                  <div class="card bg-dark">
+                    <h5 class="card-header bg-warning">TASK - Tasks</h5>
+                    <div class="card-body p-0">
+                      <div class="row g-0 h-25">
+                        <div class="col-12 bg-dark">
+                          <div class="btn-group mfd-button-group p-1">
+                            <button type="button" class="btn mfd-button btn-outline-primary m-1">
+                              ﭜ
+                            </button>
+                            <button type="button" class="btn mfd-button btn-outline-danger m-1">
+                              
+                            </button>
+                            <button type="button" class="btn mfd-button btn-outline-success m-1">
+                              ﬽
+                            </button>
                           </div>
                         </div>
                       </div>
-
-                      <div class="col-10 p-1">
-                        <div class="card text-white bg-mfd-readable border-secondary mb-3">
-                          <div class="card-header border-secondary">
-                            Task List 1
+                      <div class="row g-0 h-100">
+                        <div class="col-3 p-1 bf">
+                          <div class="card text-white bg-mfd-readable border-secondary mb-3" style="max-width: 18rem">
+                            <div class="card-header border-secondary p-2">
+                              Lists
+                            </div>
+                            <div class="card-body p-1">
+                              <table class="table table-borderless">
+                                <tbody>
+                                  <tr>
+                                    <td>Personal</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Home</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Work</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Projects.Atom</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Projects.Jetstream</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
-                          <div class="card-body">
-                            <table class="table rounded-2">
-                              <thead>
-                                <tr class="">
-                                  <th scope="col">Key</th>
-                                  <th scope="col">Name</th>
-                                  <th scope="col">Priority</th>
-                                  <th scope="col">Due</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">IOTSRE-1122</th>
-                                  <td>Do a thing</td>
-                                  <td>Normal</td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">IOTSRE-1122</th>
-                                  <td>Another thing</td>
-                                  <td>Low</td>
-                                  <td>Tomorrow</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">IOTSRE-1122</th>
-                                  <td>Change some chart values</td>
-                                  <td>High</td>
-                                  <td>Today</td>
-                                </tr>
-                              </tbody>
-                            </table>
+                        </div>
+    
+                        <div class="col-9 p-1">
+                          <div class="card text-white bg-mfd-readable border-secondary mb-3">
+                            <div class="card-header border-secondary">
+                              Task List 1
+                            </div>
+                            <div class="card-body">
+                              <table class="table rounded-2">
+                                <thead>
+                                  <tr class="">
+                                    <th scope="col">Key</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Priority</th>
+                                    <th scope="col">Due</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">MUNRO-1234</th>
+                                    <td>This is my current task</td>
+                                    <td>Normal</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">MUNRO-1235</th>
+                                    <td>This task is next up</td>
+                                    <td>Low</td>
+                                    <td>Tomorrow</td>
+                                  </tr>
+                                  <tr class="bg-warning">
+                                    <th scope="row">WORK-1122</th>
+                                    <td>Provide value</td>
+                                    <td>High</td>
+                                    <td>Today</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
+
+
+
+
+
+
+
+
                 </div>
               </div>
             </div>

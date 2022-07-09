@@ -1,9 +1,11 @@
-![](Jetstream-LogoV1.png)
+![Jetstream Logo](Jetstream-LogoV1.png)
 
 ---
 Jetstream is a web-based software suite for building custom software tools that centralize Information, Data and Resources (IDR). Emails, Calendar Events, Alarms, Vehicles, Help Articles are all examples of IDR that we conventionally manage within a variety of apps and services.
 
 Jetstream provides tools for Modeling, Controlling and Instrumenting (MCI) this IDR and refining it into reactive applications with simple and ergonomic interfaces.
+
+![Jetstream Screenshot](Jetstream-Sample.png)
 
 ## How it works
 Most software languages and tools tend to think of information in terms of Classes, Types or Tables. Jetstream uses Info `Kinds` to label and prototype, but not define modeled information.
