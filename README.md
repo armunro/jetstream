@@ -2,7 +2,7 @@
 
 ---
 
-Jetstream is a web-based software suite for building custom software tools that centralize Information, Data and Resources (IDR). Emails, Calendar Events, Alarms, Vehicles, Help Articles are all examples of IDR that we conventionally manage within a variety of apps and services. 
+Jetstream is a web-based software suite for building custom software tools that centralize Information, Data and Resources (IDR). Emails, Calendar Events, Alarms, Vehicles, Help Articles are all examples of IDR that we conventionally manage using a few apps and services. The goal of Jetstream is to re-centralize those tools by wrapping custom IT tools and integrated 3rd party services into a single, deployable application.
 
 By taking inspiration from efficient and reliable industries like aviation, engineering, health and military, Jetstream provides tools for Modeling, Controlling and Instrumenting (MCI) this IDR and creating ergonomic interfaces.  
 
@@ -10,7 +10,7 @@ By taking inspiration from efficient and reliable industries like aviation, engi
 The sample above ([index.htm](index.htm)) is just one interpretation of a multifunction Task/Event/Communication management and notification system.
 
 ## How it works (More to come...)
-Most software languages and tools tend to think of information in terms of Classes, Types or Tables. Jetstream uses Info `Kinds` to label and prototype, but not define modeled information.
+Most software languages and tools tend to think of information in terms of Classes, Types or Tables. Jetstream uses Info `Kinds` to label and prototype, but not define patterns of information.
 
 ## Jetstream Process
 The acronym `MITER` is useful for remembering process for handling IDR:
