@@ -1,9 +1,11 @@
 ![Jetstream Logo](Jetstream-LogoV1.png)
 
 ---
+
 Jetstream is a web-based software suite for building custom software tools that centralize Information, Data and Resources (IDR). Emails, Calendar Events, Alarms, Vehicles, Help Articles are all examples of IDR that we conventionally manage within a variety of apps and services. 
 
-By taking inspiration from effecient and reliable industries like aviation, engeering, health and military, Jetstream provides tools for Modeling, Controlling and Instrumenting (MCI) this IDR and creating ergonomic interfaces. 
+By taking inspiration from efficient and reliable industries like aviation, engineering, health and military, Jetstream provides tools for Modeling, Controlling and Instrumenting (MCI) this IDR and creating ergonomic interfaces.  
+
 ![Jetstream Screenshot](Jetstream-Sample.png)
 The sample above ([index.htm](index.htm)) is just one interpretation of a multifunction Task/Event/Communication management and notification system.
 
