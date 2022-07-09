@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MFD</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="vendor/js/bootstrap.bundle.min.js"></script>
+    <link href="vendor/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="mfd.css" rel="stylesheet" />
+  </head>
+
+  <body class="mfd-body p-2 h-100">
+    <div id="app">
+      <main class="h-100">
+        <div class="container-fluid h-100">
+          <!-- Real Time Info - BEGIN -->
+          <div class="row border">
+            <div class="col-2 border-end p-0">
+              <div class="row g-0">
+                <div class="col-6 ps-1 border-end mfd-label">DATE</div>
+                <div class="col-6 ps-1 mfd-label">TIME</div>
+              </div>
+              <div class="row g-0">
+                <div class="col-6 text-center p-1 border-end">2022-07-04</div>
+                <div class="col-6 text-center p-1">{{ time }}</div>
+              </div>
+            </div>
+            <div class="col-5 border-end">
+              <div class="row">
+                <div class="col-2 mfd-label">ENG-0</div>
+                <div class="col-3 mfd-info">2022-08-22</div>
+                <div class="col-7">Dr. Smith for David</div>
+              </div>
+              <div class="row">
+                <div class="col-2 mfd-label">ENG-1</div>
+                <div class="col-3 mfd-info">2023-04-22</div>
+                <div class="col-7">Parent-Teacher Interviews</div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-2 mfd-alert">TDMS-0</div>
+                <div class="col-10">
+                  <span class="mfd-label">Email</span> | Mom | {Family supper
+                  sunday?}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 mfd-alert">TDMS-1</div>
+                <div class="col-10">
+                  <span class="mfd-label">AlertManager</span> | PROD |
+                  <span class="mfd-info">MYSQL Connection Count Critical</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row border border-top-0">
+            <div class="col-2 p-0 border-end">
+              <div class="row g-0">
+                <div class="col-6 ps-2 mfd-label border-end">ALM1</div>
+                <div class="col-6 ps-1 mfd-label">ALM2</div>
+              </div>
+              <div class="row g-0 text-center">
+                <div class="col-6 p-1 border-end">24:35:42</div>
+                <div class="col-6 p-1">3:24:42</div>
+              </div>
+            </div>
+            <div class="col-5 border-end">
+              <div class="row">
+                <div class="col-2 mfd-info">TSK-0</div>
+                <div class="col-10">JET-1234 - This is my current task</div>
+              </div>
+              <div class="row">
+                <div class="col-2 mfd-info">TSK-1</div>
+                <div class="col-10">JET-1235 - This task is next up</div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-2 mfd-alert">TDMS-2</div>
+                <div class="col-10">
+                  <span class="mfd-label">Email</span> | MikeM |
+                  <span class="mfd-info">{Computer stuff}</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 mfd-alert">TDMS-3</div>
+                <div class="col-10">
+                  <span class="mfd-label">SMS</span> | 12345 |
+                  <span class="mfd-info">{It's wednesday my dudes}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Real Time Info - END -->
+          <div class="row" style="min-height: 80%">
+            <div class="col-md-1 p-0 pe-1">
+              <div
+                class="nav flex-column nav-pills me-3"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link btn btn-outline-danger mfd-button mb-1"
+                  id="v-pills-dash-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-dash"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-dash"
+                  aria-selected="true"
+                >
+                  DASH
+                </button>
+                <button
+                  class="nav-link active btn btn-outline-danger mfd-button mb-1"
+                  id="v-pills-task-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-task"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-task"
+                  aria-selected="false"
+                >
+                  TASK
+                </button>
+                <button
+                  class="nav-link btn btn-outline-danger mfd-button mb-1"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  CAL
+                </button>
+                <button
+                  class="nav-link btn btn-outline-danger mfd-button mb-1"
+                  id="v-pills-settings-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-settings"
+                  aria-selected="false"
+                >
+                  NOTE
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-10 p-0">
+              <div id="mfd-page" class="h-100 bg-mfd-readable">
+                <div
+                  class="container p-0 m-0 tab-pane fade"
+                  id="v-pills-dash"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-dash-tab"
+                >
+                  Download Mononoki Nerd Font for icons and typeface. <br>
+                  https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Mononoki.zip
+                </div>
+                <div
+                  class="container p-0 m-0 tab-pane fade show active"
+                  id="v-pills-task"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-task-tab"
+                >
+                  <div class="">
+                    <div class="row g-0 h-25">
+                      <div class="col-12 bg-dark">
+                        <div class="btn-group mfd-button-group p-1">
+                          <button
+                            type="button"
+                            class="btn mfd-button btn-outline-primary m-1"
+                          >
+                            ﭜ
+                          </button>
+                          <button
+                            type="button"
+                            class="btn mfd-button btn-outline-danger m-1"
+                          >
+                            
+                          </button>
+                          <button
+                            type="button"
+                            class="btn mfd-button btn-outline-success m-1"
+                          >
+                            ﬽
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-0 h-100">
+                      <div class="col-2 p-1 bf">
+                        <div
+                          class="card text-white bg-mfd-readable border-secondary mb-3"
+                          style="max-width: 18rem"
+                        >
+                          <div class="card-header border-secondary p-2">
+                            Lists
+                          </div>
+                          <div class="card-body p-1">
+                            <table class="table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td>Tasks</td>
+                                </tr>
+                                <tr>
+                                  <td>Home.Tasks</td>
+                                </tr>
+                                <tr>
+                                  <td>Work.Yardi</td>
+                                </tr>
+                                <tr>
+                                  <td>Projects.Atom</td>
+                                </tr>
+                                <tr>
+                                  <td>Projects.Jetstream</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-10 p-1">
+                        <div
+                          class="card text-white bg-mfd-readable border-secondary mb-3"
+                        >
+                          <div class="card-header border-secondary">
+                            Task List 1
+                          </div>
+                          <div class="card-body">
+                            <table class="table rounded-2">
+                              <thead>
+                                <tr class="">
+                                  <th scope="col">Key</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Priority</th>
+                                  <th scope="col">Due</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">IOTSRE-1122</th>
+                                  <td>Do a thing</td>
+                                  <td>Normal</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">IOTSRE-1122</th>
+                                  <td>Another thing</td>
+                                  <td>Low</td>
+                                  <td>Tomorrow</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">IOTSRE-1122</th>
+                                  <td>Change some chart values</td>
+                                  <td>High</td>
+                                  <td>Today</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1 p-0 ps-1">
+              <div class="btn-group-vertical mfd-button-group">
+                <button
+                  type="button"
+                  @click="buttonPress"
+                  class="btn btn-outline-success mfd-button mb-1"
+                >
+                  START
+                </button>
+                <button
+                  type="button"
+                  @click="buttonPress"
+                  class="btn btn-outline-danger mfd-button mb-1"
+                >
+                  STOP
+                </button>
+                <button
+                  type=" button"
+                  @click="buttonPress"
+                  class="btn btn-outline-warning mfd-button mb-1"
+                >
+                  BREAK
+                </button>
+                <button
+                  type="button"
+                  @click="buttonPress"
+                  class="btn btn-outline-primary mfd-button mb-1"
+                >
+                  CTX
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-primary mfd-button mb-0"
+                >
+                  AMP
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="mfd-term" class="row mb-1 border bg-mfd-readable">
+            <div class="col-md-1 themed-grid-col">
+              <div class="mfd-label my-2">CONSOLE</div>
+            </div>
+            <div class="col-md-11 themed-grid-col" style="border-left: 0">
+              {{ activePage }}
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      const { createApp } = Vue;
+
+      let app = createApp({
+        data() {
+          return {
+            activePage: "",
+          };
+        },
+        methods: {
+          buttonPress: function (s, e) {
+            this.activePage = s.target.innerText;
+          },
+        },
+        computed: {
+          time() {
+            let checkTime = function (i) {
+              if (i < 10) {
+                i = "0" + i;
+              } // add zero in front of numbers < 10
+              return i;
+            };
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            return h + ":" + m + ":" + s;
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
