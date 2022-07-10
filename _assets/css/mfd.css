@@ -67,6 +67,8 @@
     font-size: 22px;
 }
 
+.mfd-card .card-header{ border:none; font-size:.9rem}
+
 .card,.card-header {border-radius: 0px; border-width: 2px;}
 
 
