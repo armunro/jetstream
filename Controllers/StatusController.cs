@@ -6,7 +6,7 @@ namespace Jetstream.Controllers;
 [Route("[controller]")]
 public class StatusController : ControllerBase
 {
-   
+
     private readonly ILogger<StatusController> _logger;
 
     public StatusController(ILogger<StatusController> logger)
@@ -17,6 +17,11 @@ public class StatusController : ControllerBase
     [HttpGet(Name = "GetStatus")]
     public object Get()
     {
-        return new {now = DateTime.Now};
+        return new
+        {
+            application = "Jetstream",
+            version = "0.1.0",
+            now = DateTime.Now
+        };
     }
 }
