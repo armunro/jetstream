@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'Mononoki Nerd Font';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/mononoki-reg-nf-mono.ttf);
+  }
+
 .mfd-body {
     background-color: #191f27;
     color: #e8f7ff; 
-    font-family: mononoki Nerd Font Mono;
+    font-family: Mononoki Nerd Font;
     font-size: 14px
 }
 
