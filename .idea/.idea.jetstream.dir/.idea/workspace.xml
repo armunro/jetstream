@@ -5,9 +5,7 @@
     <projectFile profileName="IIS Express">Jetstream.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/GatewayController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="Reorg" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +70,16 @@
       <option name="presentableId" value="Default" />
       <updated>1657728731658</updated>
       <workItem from="1657728741672" duration="779000" />
+      <workItem from="1657729616030" duration="317000" />
     </task>
+    <task id="LOCAL-00001" summary="Reorg">
+      <created>1657729883601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657729883601</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Reorg" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorg" />
   </component>
 </project>
