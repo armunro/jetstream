@@ -5,19 +5,16 @@
     <projectFile profileName="IIS Express">Jetstream.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="Reorg">
-      <change afterPath="$PROJECT_DIR$/Data/JetstreamContext.cs" afterDir="false" />
+    <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jetstream.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Jetstream.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StatusModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Code/jetstream/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657728731658</updated>
       <workItem from="1657728741672" duration="779000" />
-      <workItem from="1657729616030" duration="3099000" />
+      <workItem from="1657729616030" duration="3756000" />
     </task>
     <task id="LOCAL-00001" summary="Reorg">
       <created>1657729883601</created>
@@ -94,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657729995786</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Starting database work">
+      <created>1657736735697</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657736735697</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Reorg" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorg" />
+    <MESSAGE value="Starting database work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting database work" />
   </component>
 </project>
