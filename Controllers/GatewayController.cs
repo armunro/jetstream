@@ -7,8 +7,10 @@ namespace Jetstream.Controllers;
 public class GatewayController : Controller
 {
     // GET
-    [HttpPost(Name = "Create Unit")]
-    public object PostUnit([FromBody] object unit)
+    
+    
+    [HttpPost, Route("{gatewayId:guid}")]
+    public object PostUnit(Guid gatewayId,  [FromBody] object unit)
     {
         return new { Message = "Got it", Unit = unit};
     }

@@ -45,7 +45,7 @@
 
 
 .bg-mfd-readable {
-    background-color: #18181f;
+    background-color: #18181f !important;
     color: #e8f7ff
 }
 
