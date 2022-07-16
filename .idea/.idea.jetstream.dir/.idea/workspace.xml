@@ -7,18 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/GatewayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GatewayController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/JetstreamContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/JetstreamContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/assets/css/mfd.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/css/mfd.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/index.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Code/jetstream/Controllers/GatewayController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,6 +84,7 @@
       <workItem from="1657729616030" duration="3756000" />
       <workItem from="1657825127070" duration="8762000" />
       <workItem from="1657838861075" duration="2106000" />
+      <workItem from="1658006538603" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="Reorg">
       <created>1657729883601</created>
