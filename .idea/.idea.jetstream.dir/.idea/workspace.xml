@@ -6,12 +6,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/Model/UnitDataModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/GatewayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GatewayController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/JetstreamContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/JetstreamContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Andrew Munro &lt;12575339+armunro@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/362b3367fee82c815c79f6cd7b4631f61a2fc88c555016a2f87944d0454aac/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,7 +41,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -85,6 +98,9 @@
       <workItem from="1657825127070" duration="8762000" />
       <workItem from="1657838861075" duration="2106000" />
       <workItem from="1658006538603" duration="196000" />
+      <workItem from="1658006845723" duration="1569000" />
+      <workItem from="1658085758796" duration="306000" />
+      <workItem from="1658086109216" duration="4123000" />
     </task>
     <task id="LOCAL-00001" summary="Reorg">
       <created>1657729883601</created>
@@ -107,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657736735697</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Workspace changes">
+      <created>1658007196381</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658007196381</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,25 +153,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Reorg" />
     <MESSAGE value="Starting database work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting database work" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/GatewayController.cs</url>
-          <line>14</line>
-          <properties documentPath="C:\Code\jetstream\Controllers\GatewayController.cs" initialLine="14" containingFunctionPresentation="method 'PostUnit'">
-            <startOffsets>
-              <option value="298" />
-            </startOffsets>
-            <endOffsets>
-              <option value="344" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Workspace changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace changes" />
   </component>
 </project>

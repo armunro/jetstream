@@ -8,9 +8,23 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0-preview.6.22329.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0-preview.6.22329.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0-preview.6.22329.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Npgsql" Version="7.0.0-preview.6" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0-preview.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Jetstream.Data\obj\Jetstream.Data.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="Jetstream.Data\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="Jetstream.Data\obj\project.packagespec.json" />
   </ItemGroup>
 
 </Project>
