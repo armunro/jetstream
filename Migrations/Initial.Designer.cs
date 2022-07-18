@@ -11,9 +11,9 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Jetstream.Migrations
 {
-    [DbContext(typeof(JetstreamContext))]
-    [Migration("20220717233828_Remove Created dt")]
-    partial class RemoveCreateddt
+    [DbContext(typeof(JetDbContext))]
+    [Migration("20220717232603_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,6 +34,9 @@ namespace Jetstream.Migrations
                     b.Property<string>("Contents")
                         .IsRequired()
                         .HasColumnType("jsonb");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("GatewayId")
                         .HasColumnType("uuid");

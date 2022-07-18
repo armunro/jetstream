@@ -3,6 +3,7 @@ using System;
 using Jetstream.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Jetstream.Migrations
 {
     [DbContext(typeof(JetDbContext))]
-    partial class JetstreamContextModelSnapshot : ModelSnapshot
+    [Migration("20220718172401_Add tables")]
+    partial class Addtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,26 +41,7 @@ namespace Jetstream.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Gateway");
-                });
-
-            modelBuilder.Entity("Jetstream.Data.Model.JetDbKind", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Namespace")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Kind");
+                    b.ToTable("Gateways");
                 });
 
             modelBuilder.Entity("Jetstream.Data.Model.JetDbUnit", b =>
@@ -77,22 +61,7 @@ namespace Jetstream.Migrations
 
                     b.HasIndex("GatewayId");
 
-                    b.ToTable("Unit");
-                });
-
-            modelBuilder.Entity("Jetstream.Data.Model.JetDbUnitKind", b =>
-                {
-                    b.Property<Guid>("UnitId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("KindId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("UnitId", "KindId");
-
-                    b.HasIndex("KindId");
-
-                    b.ToTable("UnitKind");
+                    b.ToTable("Units");
                 });
 
             modelBuilder.Entity("Jetstream.Data.Model.JetDbUnit", b =>
@@ -104,25 +73,6 @@ namespace Jetstream.Migrations
                         .IsRequired();
 
                     b.Navigation("Gateway");
-                });
-
-            modelBuilder.Entity("Jetstream.Data.Model.JetDbUnitKind", b =>
-                {
-                    b.HasOne("Jetstream.Data.Model.JetDbKind", "Kind")
-                        .WithMany()
-                        .HasForeignKey("KindId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Jetstream.Data.Model.JetDbUnit", "Unit")
-                        .WithMany()
-                        .HasForeignKey("UnitId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Kind");
-
-                    b.Navigation("Unit");
                 });
 #pragma warning restore 612, 618
         }

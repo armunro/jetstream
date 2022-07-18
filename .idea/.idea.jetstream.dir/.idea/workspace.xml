@@ -6,10 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="413f53c0-6a0d-487c-9341-72054fa5d5a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/Model/UnitDataModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Model/JetDbGateway.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Model/JetDbProto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Model/JetDbProtoProp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jetstream.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/GatewayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GatewayController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/JetstreamContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/JetstreamContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/JetstreamContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/JetDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/UnitDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/JetDbUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20220717232603_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20220717232603_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20220717233828_Remove Created dt.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20220717233828_Remove Created dt.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/JetstreamContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/JetstreamContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +37,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2BtcGE9WIMaLVIdM4n0ejGoUyCd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,6 +110,10 @@
       <workItem from="1658006845723" duration="1569000" />
       <workItem from="1658085758796" duration="306000" />
       <workItem from="1658086109216" duration="4123000" />
+      <workItem from="1658153834051" duration="777000" />
+      <workItem from="1658155517782" duration="1513000" />
+      <workItem from="1658163537696" duration="17000" />
+      <workItem from="1658164008190" duration="855000" />
     </task>
     <task id="LOCAL-00001" summary="Reorg">
       <created>1657729883601</created>
