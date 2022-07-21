@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Jetstream.Migrations
 {
     [DbContext(typeof(JetDbContext))]
-    [Migration("20220718201240_ChangeTableNames")]
-    partial class ChangeTableNames
+    [Migration("20220720161418_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace Jetstream.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -42,6 +45,37 @@ namespace Jetstream.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Gateway");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("0202ce66-2504-4211-ba35-bce32e527d41"),
+                            Created = new DateTime(2022, 7, 20, 10, 14, 18, 108, DateTimeKind.Local).AddTicks(7977),
+                            Description = "For testing and demo purposes",
+                            Name = "Sample - Task Gateway"
+                        });
+                });
+
+            modelBuilder.Entity("Jetstream.Data.Model.JetDbGatewayProto", b =>
+                {
+                    b.Property<Guid>("GatewayId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ProtoId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("GatewayId", "ProtoId");
+
+                    b.HasIndex("ProtoId");
+
+                    b.ToTable("GatewayProto");
+
+                    b.HasData(
+                        new
+                        {
+                            GatewayId = new Guid("0202ce66-2504-4211-ba35-bce32e527d41"),
+                            ProtoId = new Guid("cf089500-9694-40e9-ae37-2f7de429ac88")
+                        });
                 });
 
             modelBuilder.Entity("Jetstream.Data.Model.JetDbKind", b =>
@@ -61,6 +95,55 @@ namespace Jetstream.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Kind");
+                });
+
+            modelBuilder.Entity("Jetstream.Data.Model.JetDbProto", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Proto");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("cf089500-9694-40e9-ae37-2f7de429ac88"),
+                            Name = "Task Proto"
+                        });
+                });
+
+            modelBuilder.Entity("Jetstream.Data.Model.JetDbProtoRule", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Expression")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProtoId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProtoId");
+
+                    b.ToTable("ProtoRule");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("746bea9f-7af8-489b-b824-5b12206b8482"),
+                            Expression = "",
+                            ProtoId = new Guid("cf089500-9694-40e9-ae37-2f7de429ac88")
+                        });
                 });
 
             modelBuilder.Entity("Jetstream.Data.Model.JetDbUnit", b =>
@@ -96,6 +179,36 @@ namespace Jetstream.Migrations
                     b.HasIndex("KindId");
 
                     b.ToTable("UnitKind");
+                });
+
+            modelBuilder.Entity("Jetstream.Data.Model.JetDbGatewayProto", b =>
+                {
+                    b.HasOne("Jetstream.Data.Model.JetDbGateway", "Gateway")
+                        .WithMany()
+                        .HasForeignKey("GatewayId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Jetstream.Data.Model.JetDbProto", "Proto")
+                        .WithMany()
+                        .HasForeignKey("ProtoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gateway");
+
+                    b.Navigation("Proto");
+                });
+
+            modelBuilder.Entity("Jetstream.Data.Model.JetDbProtoRule", b =>
+                {
+                    b.HasOne("Jetstream.Data.Model.JetDbProto", "Proto")
+                        .WithMany()
+                        .HasForeignKey("ProtoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Proto");
                 });
 
             modelBuilder.Entity("Jetstream.Data.Model.JetDbUnit", b =>

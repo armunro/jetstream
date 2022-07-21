@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.ComponentModel;
+using System.Text.Json;
 using Jetstream.Data;
 using Jetstream.Data.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -10,18 +11,27 @@ namespace Jetstream.Controllers;
 public class GatewayController : Controller
 {
    
-    [HttpPost, Route("{gatewayId:guid}")]
-    public object PostUnit(Guid gatewayId,  [FromBody] object unit)
+    [HttpPost, Route("{gatewayId:guid}"),]
+    
+    public object PostUnit([DefaultValue("0202CE66-2504-4211-BA35-BCE32E527D41")]Guid gatewayId,  [FromBody, DefaultValue(Globals.TaskA)] object unit)
     {
         JetDbContext db = new JetDbContext();
+
         
-        db.Units.Add(new JetDbUnit(){
+        var protos = db.Protos;
+        
+
+
+        var dbUnit = new JetDbUnit
+        {
             Id = Guid.NewGuid(),
             GatewayId = gatewayId,
-            Contents = JsonSerializer.Serialize(unit)
-        });
+            Contents = JsonDocument.Parse(JsonSerializer.Serialize(unit))
+        };
+        
+        db.Units.Add(dbUnit);
         db.SaveChanges();
         
-        return new { Message = "Got it", Unit = unit};
+        return new { UnitId = dbUnit.Id, AppliedProtos = protos};
     }
 }
