@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace Jetstream.Data.Model;
 
-[Table("Gateway")]
+[Table("Gateway"),PrimaryKey("Id")]
 public class JetDbGateway
 {
     public Guid Id { get; set; }

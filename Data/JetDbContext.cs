@@ -9,7 +9,6 @@ public class JetDbContext : DbContext
     public DbSet<JetDbGateway> Gateways { get; set; }
     public DbSet<JetDbUnitProtoKind> UnitKinds { get; set; }
     public DbSet<JetDbProto> Protos { get; set; }
-    
     public DbSet<JetDbGatewayProto> GatewayKindProtos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -36,7 +35,7 @@ public class JetDbContext : DbContext
         });
         modelBuilder.Entity<JetDbProto>().HasData(new List<JetDbProto>()
         {
-            new() { Id = newProtoId, Name = "Task Due Date", KindId = newKindId, Expression = "$.Date"}
+            new() { Id = newProtoId, Name = "Task Due Date", KindId = newKindId, Expression = "$.Date", Role = ProtoRole.Tag}
         });
         
     

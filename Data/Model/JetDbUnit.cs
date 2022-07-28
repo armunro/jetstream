@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace Jetstream.Data.Model;
 
-[Table("Unit")]
+[Table("Unit"), PrimaryKey("Id")]
 public class JetDbUnit
 {
     public Guid Id { get; set; }

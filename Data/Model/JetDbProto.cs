@@ -3,11 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Jetstream.Data.Model;
 
-[Table("Proto")]
+[Table("Proto"),PrimaryKey("Id")]
 public class JetDbProto
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
+    
+    [Column(TypeName = "int")]
+    public ProtoRole Role { get; set; }
     
     public string? Expression { get; set; }
     
